@@ -112,7 +112,6 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
-  color: var(--text-color);
 }
 
 h1, h2, h3, h4 {
@@ -435,6 +434,7 @@ img {
 }
 
 /*==================== SKILLS ====================*/
+
 .skills__container{
   row-gap: 0;
 }
@@ -636,7 +636,7 @@ img {
 /*==================== SERVICES ====================*/
 .services__container{
   gap: 1.5rem;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 2fr);
 }
 
 .services__content{
@@ -944,6 +944,15 @@ img {
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
 @media screen and (max-width: 350px){
+  body{
+    background: linear-gradient(
+      -175deg,
+      var(--first-color-second) 0%,
+      var(--first-color-second) 1%,
+      var(--body-color) 1%,
+      var(--body-color) 100%);
+  }
+
   .container{
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
@@ -993,6 +1002,7 @@ img {
 
 /* For medium devices */
 @media screen and (min-width: 568px) {
+
   .home__content{
     grid-template-columns: max-content 1fr 1fr;
   }
@@ -1138,7 +1148,7 @@ img {
   }
 
   .services__container{
-    grid-template-columns: repeat(3, 218px);
+    grid-template-columns: repeat(2, 2fr);
     justify-content: center;
   }
 
@@ -1201,7 +1211,7 @@ img {
   }
 
   .services__container{
-    grid-template-columns: repeat(3, 238px);
+    grid-template-columns: repeat(2, 2fr);
   }
 
   .portfolio__content{
@@ -1239,6 +1249,6 @@ img {
   }
 
   .services__container{
-    grid-template-columns: repeat(4, 230px);
+    grid-template-columns: repeat(4, 300px);
   }
 }
