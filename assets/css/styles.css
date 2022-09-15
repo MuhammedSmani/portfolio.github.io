@@ -1039,6 +1039,21 @@ img {
   }
 }
 
+@media screen and (max-width: 414px){
+  .services__container{
+    grid-template-columns: max-content;
+    justify-content: center;
+  }
+
+  .services__content{
+    padding-right: 3.5rem;
+  }
+  
+  .services__modal{
+    padding: 0 .5rem ;
+  }
+}
+
 /* For medium devices */
 @media screen and (min-width: 568px) {
 
@@ -1125,9 +1140,9 @@ img {
     column-gap: 2rem;
   }
 
-  .nav__menu{
+  /* .nav__menu{
     margin-left: auto;
-  }
+  } */
 
   .change-theme{
     margin: 0;
