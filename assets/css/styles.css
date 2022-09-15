@@ -21,6 +21,7 @@
     --container-color: #fff;
     --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+    --nav-hover-color: hsl(var(--hue-color), 92%, 85%);
 
     /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;
@@ -77,6 +78,7 @@ body.dark-theme{
       --container-color: hsl(var(--hue-color), 29%, 16%);
       --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
       --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+      --nav-hover-color: hsl(var(--hue-color), 30%, 8%);
 }
 
 /*========== Button Dark/Light ==========*/
@@ -229,10 +231,13 @@ img {
   font-size: var(--small-font-size);
   color: var(--title-color);
   font-weight: var(--font-medium);
+  padding: 6px 8px;
+  border-radius: 0.5rem;
 }
 
 .nav__link:hover{
-  color: var(--first-color);
+  /* color: var(--nav-hover-color); */
+  background-color: var(--nav-hover-color);
 }
 
 .nav__icon{
@@ -259,12 +264,12 @@ img {
 
 /* Active link */
 .active-link{
-  color: var(--first-color);
+  background-color: var(--nav-hover-color);
 }
 
 /* Change background header */
 .scroll-header{
-  box-shadow: 0 -1px 5px rgba(0, 0, 0, .15);
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, .25);
 }
 
 /*==================== HOME ====================*/
@@ -907,7 +912,7 @@ img {
   background-color: var(--first-color);
   opacity: .8;
   padding: 0 .3rem;
-  border-radius: .4rem;
+  border-radius: .5rem;
   z-index: var(--z-tooltip);
   transition: .4s;
 }
