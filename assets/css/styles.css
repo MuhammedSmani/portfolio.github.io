@@ -1329,6 +1329,6 @@ img {
   }
 
   .services__container{
-    grid-template-columns: repeat(4, 300px);
+    grid-template-columns: repeat(4, 280px);
   }
 }
