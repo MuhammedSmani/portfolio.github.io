@@ -1045,7 +1045,7 @@ img {
     justify-content: center;
   }
 
-  .services__content{
+    .services__content{
     padding-right: 3.5rem;
   }
   
@@ -1232,6 +1232,8 @@ img {
 
   .footer__container{
     grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-between;
   }
 
   .footer__bg{
@@ -1239,12 +1241,16 @@ img {
   }
 
   .footer__links{
-    flex-direction: row;
+    flex-direction: column;
     column-gap: 2rem;
   }
 
   .footer__socials{
-    justify-self: flex-end;
+    /* justify-self: flex-end; */
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
   .footer__copy{
@@ -1298,6 +1304,10 @@ img {
 
   .contact__inputs{
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__container{
+    column-gap: 10rem;
   }
 }
 
