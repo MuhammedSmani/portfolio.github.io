@@ -1073,9 +1073,21 @@ img {
 
   .about__container,
   .portfolio__content,
-  .contact__container,
-  .footer__container{
+  .contact__container{
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__container{
+    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer__socials{
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
   .skills__container{
