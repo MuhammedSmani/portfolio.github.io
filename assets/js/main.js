@@ -151,12 +151,13 @@ function scrollHeader(){
 window.addEventListener('scroll', scrollHeader)
 
 /*==================== SHOW SCROLL TOP ====================*/ 
-function scrollTop(){
-    const scrollTop = document.getElementById('scroll-top');
+// function scrollTop(){
+//     const scrollTop = document.getElementById('scroll-top');
+//     console.log({scrollTop});
 
-    if(this.scrollY >= 560) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
-}
-window.addEventListener('scroll', scrollTop)
+//     if(this.scrollY >= 560) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
+// }
+// window.addEventListener('scroll', scrollTop)
 
 /*==================== DARK LIGHT THEME ====================*/ 
 const themeButton = document.getElementById('theme-button')
