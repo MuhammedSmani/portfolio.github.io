@@ -159,7 +159,7 @@ window.addEventListener('scroll', scrollHeader)
 // }
 // window.addEventListener('scroll', scrollTop)
 
-/*==================== DARK LIGHT THEME ====================*/ 
+/*==================== DARK LIGHT THEME BLUE COLOR ====================*/ 
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
 const iconTheme = 'uil-sun'
@@ -184,3 +184,55 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+// /*==================== BLUE GREEN COLOR ====================*/ 
+// const colorButton = document.getElementById('color-button')
+// const greenColor = 'green-color'
+// const iconColor = 'uil-swatchbook'
+
+// const selectedColor = localStorage.getItem('selected-color')
+// const selectedColorIcon = localStorage.getItem('selected-color-icon')
+
+// const getCurrentColor = () => document.body.classList.contains(greenColor) ? 'green' : 'blue'
+// const getCurrentColorIcon = () => colorButton.classList.contains(iconColor) ? 'uil-palette' : 'uil-swatchbook'
+
+// if (selectedColor) {
+
+//     document.body.classList[selectedColor === 'green' ? 'add' : 'remove'](greenColor)
+//   colorButton.classList[selectedColorIcon === 'uil-palette' ? 'add' : 'remove'](iconColor)
+// }
+
+// colorButton.addEventListener('click', () => {
+
+//     document.body.classList.toggle(greenColor)
+//     colorButton.classList.toggle(iconColor)
+
+//     localStorage.setItem('selected-color', getCurrentColor())
+//     localStorage.setItem('selected-color-icon', getCurrentColorIcon())
+// })
+
+// /*==================== DARK LIGHT THEME GREEN COLOR ====================*/ 
+// const themeButton = document.getElementById('theme-button')
+// const darkTheme = 'dark-theme'
+// const iconTheme = 'uil-sun'
+
+// const selectedTheme = localStorage.getItem('selected-theme')
+// const selectedIcon = localStorage.getItem('selected-icon')
+
+// const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+// const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'
+
+// if (selectedTheme) {
+
+//     document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+//   themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
+// }
+
+// themeButton.addEventListener('click', () => {
+
+//     document.body.classList.toggle(darkTheme)
+//     themeButton.classList.toggle(iconTheme)
+
+//     localStorage.setItem('selected-theme', getCurrentTheme())
+//     localStorage.setItem('selected-icon', getCurrentIcon())
+// })
