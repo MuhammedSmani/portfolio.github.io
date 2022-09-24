@@ -1,18 +1,18 @@
 /*==================== MENU SHOW Y HIDDEN ====================*/
 const navMenu = document.getElementById('nav-menu'),
-      navToggle = document.getElementById('nav-toggle'),
-      navClose = document.getElementById('nav-close')
+    navToggle = document.getElementById('nav-toggle'),
+    navClose = document.getElementById('nav-close')
 
 /*===== MENU SHOW =====*/
-if(navToggle){
-    navToggle.addEventListener('click', () =>{
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
         navMenu.classList.add('show-menu')
     })
 }
 
 /*===== MENU HIDDEN =====*/
-if(navClose){
-    navClose.addEventListener('click', () =>{
+if (navClose) {
+    navClose.addEventListener('click', () => {
         navMenu.classList.remove('show-menu')
     })
 }
@@ -20,7 +20,7 @@ if(navClose){
 /*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll('.nav__link')
 
-function linkAction(){
+function linkAction() {
     const navMenu = document.getElementById('nav-menu')
 
     navMenu.classList.remove('show-menu')
@@ -29,28 +29,28 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*==================== ACCORDION SKILLS ====================*/
 const skillsContent = document.getElementsByClassName('skills__content'),
-      skillsHeader = document.querySelectorAll('.skills__header')
+    skillsHeader = document.querySelectorAll('.skills__header')
 
-function toggleSkills(){
+function toggleSkills() {
     let itemClass = this.parentNode.className
 
-    for(i = 0; i < skillsContent.length; i++){
+    for (i = 0; i < skillsContent.length; i++) {
         skillsContent[i].className = 'skills__content skills__close'
     }
-    if(itemClass === 'skills__content skills__close'){
+    if (itemClass === 'skills__content skills__close') {
         this.parentNode.className = 'skills__content skills__open'
     }
 }
 
-skillsHeader.forEach((el) =>{
+skillsHeader.forEach((el) => {
     el.addEventListener('click', toggleSkills)
 })
 
 /*==================== QUALIFICATION TABS ====================*/
 const tabs = document.querySelectorAll('[data-target]'),
-      tabContents = document.querySelectorAll('[data-content]')
+    tabContents = document.querySelectorAll('[data-content]')
 
-tabs.forEach(tab =>{
+tabs.forEach(tab => {
     tab.addEventListener('click', () => {
         const target = document.querySelector(tab.dataset.target)
 
@@ -68,10 +68,10 @@ tabs.forEach(tab =>{
 
 /*==================== SERVICES MODAL ====================*/
 const modalView = document.querySelectorAll('.services__modal'),
-      modalBtns = document.querySelectorAll('.services__button'),
-      modalClose = document.querySelectorAll('.services__modal-close')
+    modalBtns = document.querySelectorAll('.services__button'),
+    modalClose = document.querySelectorAll('.services__modal-close')
 
-let modal = function(modalClick){
+let modal = function (modalClick) {
     modalView[modalClick].classList.add('active-modal')
 }
 
@@ -82,7 +82,7 @@ modalBtns.forEach((modalBtn, i) => {
 })
 
 modalClose.forEach((modalClose) => {
-    modalClose.addEventListener('click' , () => {
+    modalClose.addEventListener('click', () => {
         modalView.forEach((modalView) => {
             modalView.classList.remove('active-modal')
         })
@@ -90,7 +90,7 @@ modalClose.forEach((modalClose) => {
 })
 
 /*==================== PORTFOLIO SWIPER  ====================*/
-let swiper = new Swiper('.portfolio__container',{
+let swiper = new Swiper('.portfolio__container', {
     cssMode: true,
     loop: true,
 
@@ -109,57 +109,48 @@ let swiper = new Swiper('.portfolio__container',{
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
 
-function scrollActive(){
+function scrollActive() {
     const scrollY = window.pageYOffset
 
-    sections.forEach(current =>{
+    sections.forEach(current => {
         const sectionHeight = current.offsetHeight
         const sectionTop = current.offsetTop - 50;
         sectionId = current.getAttribute('id')
 
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-        }else{
+        } else {
             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
         }
     })
 }
 window.addEventListener('scroll', scrollActive)
 
-/*==================== CHANGE BACKGROUND HEADER ====================*/ 
-function scrollHeader(){
+/*==================== CHANGE BACKGROUND HEADER ====================*/
+function scrollHeader() {
     const nav = document.getElementById('header')
 
-    if(this.scrollY >= 80) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
+    if (this.scrollY >= 80) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
 }
 window.addEventListener('scroll', scrollHeader)
 
-/*==================== SHOW SCROLL UP ====================*/ 
-function scrollUp(){
+/*==================== SHOW SCROLL UP ====================*/
+function scrollUp() {
     const scrollUp = document.getElementById('scroll-up');
 
-    if(this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+    if (this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
 
-/*==================== DARK LIGHT THEME ====================*/ 
-function scrollHeader(){
+/*==================== DARK LIGHT THEME ====================*/
+function scrollHeader() {
     const nav = document.getElementById('header')
 
-    if(this.scrollY >= 200) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
+    if (this.scrollY >= 200) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
 }
 window.addEventListener('scroll', scrollHeader)
 
-/*==================== SHOW SCROLL TOP ====================*/ 
-// function scrollTop(){
-//     const scrollTop = document.getElementById('scroll-top');
-//     console.log({scrollTop});
-
-//     if(this.scrollY >= 560) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
-// }
-// window.addEventListener('scroll', scrollTop)
-
-/*==================== DARK LIGHT THEME BLUE COLOR ====================*/ 
+/*==================== DARK LIGHT THEME BLUE COLOR ====================*/
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
 const iconTheme = 'uil-sun'
@@ -173,7 +164,7 @@ const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-mo
 if (selectedTheme) {
 
     document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-  themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
+    themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
 }
 
 themeButton.addEventListener('click', () => {
@@ -184,55 +175,3 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
-
-// /*==================== BLUE GREEN COLOR ====================*/ 
-// const colorButton = document.getElementById('color-button')
-// const greenColor = 'green-color'
-// const iconColor = 'uil-swatchbook'
-
-// const selectedColor = localStorage.getItem('selected-color')
-// const selectedColorIcon = localStorage.getItem('selected-color-icon')
-
-// const getCurrentColor = () => document.body.classList.contains(greenColor) ? 'green' : 'blue'
-// const getCurrentColorIcon = () => colorButton.classList.contains(iconColor) ? 'uil-palette' : 'uil-swatchbook'
-
-// if (selectedColor) {
-
-//     document.body.classList[selectedColor === 'green' ? 'add' : 'remove'](greenColor)
-//   colorButton.classList[selectedColorIcon === 'uil-palette' ? 'add' : 'remove'](iconColor)
-// }
-
-// colorButton.addEventListener('click', () => {
-
-//     document.body.classList.toggle(greenColor)
-//     colorButton.classList.toggle(iconColor)
-
-//     localStorage.setItem('selected-color', getCurrentColor())
-//     localStorage.setItem('selected-color-icon', getCurrentColorIcon())
-// })
-
-// /*==================== DARK LIGHT THEME GREEN COLOR ====================*/ 
-// const themeButton = document.getElementById('theme-button')
-// const darkTheme = 'dark-theme'
-// const iconTheme = 'uil-sun'
-
-// const selectedTheme = localStorage.getItem('selected-theme')
-// const selectedIcon = localStorage.getItem('selected-icon')
-
-// const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-// const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'
-
-// if (selectedTheme) {
-
-//     document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-//   themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
-// }
-
-// themeButton.addEventListener('click', () => {
-
-//     document.body.classList.toggle(darkTheme)
-//     themeButton.classList.toggle(iconTheme)
-
-//     localStorage.setItem('selected-theme', getCurrentTheme())
-//     localStorage.setItem('selected-icon', getCurrentIcon())
-// })
