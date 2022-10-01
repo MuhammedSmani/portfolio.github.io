@@ -31,7 +31,9 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 const skillsContent = document.getElementsByClassName('skills__content'),
     skillsHeader = document.querySelectorAll('.skills__header')
 
+
 function toggleSkills() {
+    
     let itemClass = this.parentNode.className
 
     for (i = 0; i < skillsContent.length; i++) {
@@ -87,6 +89,23 @@ modalClose.forEach((modalClose) => {
             modalView.classList.remove('active-modal')
         })
     })
+})
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") {
+        modalView.forEach((modalView) => {
+            modalView.classList.remove('active-modal')
+        })
+    }
+})
+
+document.addEventListener('click', function(event) {
+    if (event.target.matches(".services__modal")) {
+
+        modalView.forEach((modalView) => {
+            modalView.classList.remove('active-modal')
+        })
+    }
 })
 
 /*==================== PORTFOLIO SWIPER  ====================*/

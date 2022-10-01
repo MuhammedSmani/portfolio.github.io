@@ -101,8 +101,19 @@
                     </div>
 
                     <div class="home__data">
-                        <h1 class="home__title">Hi, I am Muhammed</h1>
-                        <h3 class="home__subtitle">Graphic Designer and Front-end Developer</h3>
+                        <!-- <h1 class="home__title">Hi, I am Muhammed</h1> -->
+                        <h1 class="typewrite__content">
+                            <a href="#" class="home__title typewrite" data-period="1500"
+                                data-type='["Hi, I am Muhammed.", "I am a Graphic Designer.", "And a Front-end Developer."]'>
+                                <span class="wrap"></span>
+                            </a>
+                        </h1>
+                        <!-- <h1>
+                            <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Si.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'>
+                              <span class="wrap"></span>
+                            </a>
+                          </h1> -->
+                        <!-- <h3 class="home__subtitle">Graphic Designer and Front-end Developer</h3> -->
                         <p class="home__description">Experienced in Logo Designes, Brandings, Web Designes and Web
                             Developements. Always producing quality work.</p>
                         <a href="#contact" class="button button--flex">
@@ -127,7 +138,11 @@
             <span class="section__subtitle">My introduction</span>
 
             <div class="about__container container grid">
-                <img src="assets/img/aboutme.png" alt="" class="about__img">
+                <!-- <img src="assets/img/aboutme.png" alt="" class="about__img"> -->
+                
+                <div class="image-wrapper shine">
+                    <img src="./assets/img/aboutme.png" class="about__img" />
+                </div>
 
                 <div class="about__data">
                     <p class="about__description">
@@ -639,7 +654,7 @@
         <!--==================== PORTFOLIO ====================-->
         <section class="portfolio section" id="portfolio">
             <h2 class="section__title">Portfolio</h2>
-            <span class="section__subtitle">Most recent work</span>
+            <span class="section__subtitle" style="margin-bottom: 2rem;">Most recent work</span>
 
             <div class="portfolio__container container swiper-container">
                 <div class="swiper-wrapper">
@@ -880,6 +895,9 @@
 
     <!--==================== SWIPER JS ====================-->
     <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--==================== SWIPER JS ====================-->
+    <script src="assets/js/typewriter.js"></script>
 
     <!--==================== MAIN JS ====================-->
     <script src="assets/js/main.js"></script>
